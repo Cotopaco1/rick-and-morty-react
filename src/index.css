@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* BASE */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  /* PRIMARY */
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  /* SECONDARY */
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  /* MUTED */
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  /* ACCENT */
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  /* UI */
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+}
+:root {
+
+  /* === BASE === */
+  --background: 120 25% 94%;       /* #E2EFDE */
+  --foreground: 154 5% 53%;        /* #808F87 */
+
+  /* === PRIMARY === */
+  --primary: 40 38% 44%;           /* #9B7E46 */
+  --primary-foreground: 0 0% 98%;
+
+  /* === SECONDARY / MUTED === */
+  --secondary: 143 25% 75%;        /* #AFD0BF */
+  --secondary-foreground: 154 5% 25%;
+
+  --muted: 143 25% 75%;            /* mismo color que secondary, válido */
+  --muted-foreground: 154 5% 35%;
+
+  /* === ACCENT === */
+  --accent: 32 87% 69%;            /* #F4B266 */
+  --accent-foreground: 25 40% 20%;
+
+  /* === UI === */
+  --border: 154 10% 80%;
+  --input: 154 10% 80%;
+  --ring: var(--primary);
+
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+@utility container {
+  @apply max-w-6xl mx-auto p-4 md:p-0;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+.header_subtitle {
+  @apply text-xl md:text-2xl mb-4;
+}
