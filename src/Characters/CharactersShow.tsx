@@ -9,7 +9,7 @@ import CharacterElementList from "./CharacterElementList";
 export default function CharacterShow() {
 
     let { id } = useParams();
-    const [characterStatus, setCharacter] = useState<CharacterType>({});
+    const [characterStatus, setCharacter] = useState<CharacterType | null>(null);
     const [loading, setLoading] = useState(true);
 
     const getCharacter = (id: number) => {
@@ -38,7 +38,7 @@ export default function CharacterShow() {
 
     }, []);
 
-    if (loading) return <div>Cargando....</div>;
+    if (loading || !characterStatus) return <div>Cargando....</div>;
     return (
         <div className="flex flex-col md:flex-row gap-4">
             {/* Imagen */}

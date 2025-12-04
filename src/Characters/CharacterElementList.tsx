@@ -1,5 +1,4 @@
 import type React from "react";
-import { DynamicIcon } from 'lucide-react/dynamic';
 import { LocateFixedIcon, HomeIcon ,PersonStandingIcon, FishSymbolIcon } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -27,7 +26,7 @@ export default function CharacterElementList({children, icon, title}:Props){
     const Icon = getIcon();
 
     return (
-        <div className="flex gap-2" title="Localización">
+        <div className="flex gap-2" title={title}>
             <Icon/>
             {children}
         </div>

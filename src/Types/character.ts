@@ -3,7 +3,10 @@ type Character = {
     id : number;
     created : string;
     gender : string;
-    location : {};
+    location : {
+        url : string;
+        name : string;
+    }
     episode : [];
     name : string;
     origin : {};
@@ -11,6 +14,7 @@ type Character = {
     status : 'alive'|'dead'|'unknown';
     type : string;
     url : string;
+    
 }
 
 export type CharacterType = Character;
